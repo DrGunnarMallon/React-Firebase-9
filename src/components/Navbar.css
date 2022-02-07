@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+}
+
+.navbar :first-child {
+  margin-right: auto;
+}
+
+.navbar .btn {
+  background: #ededed;
+  border: 1px dashed #333;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 4px 10px;
+}

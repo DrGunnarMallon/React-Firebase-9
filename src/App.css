@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --clr-red: rgb(216, 35, 28);
+  --clr-blue: rgb(16, 37, 230);
+  --clr-dark-black: #222;
+  --clr-dark-gray: #333;
+  --clr-light-white: #fcfcfc;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Bitter";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  font-size: 1.1em;
+  background: var(--clr-light-white);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.card form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background-image: linear-gradient(
+    to top left,
+    var(--clr-red),
+    var(--clr-blue)
+  );
+  border: 2px solid var(--clr-dark-gray);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  color: var(--clr-light-white);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.card input {
+  font-size: 1rem;
+  border: 1px solid var(--clr-dark-gray);
+  font-family: sans-serif;
+  padding: 5px;
+}
+
+.card .btn {
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--clr-dark-black);
+  background: var(--clr-light-white);
+  padding-block: 0.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Helpers */
+
+.error {
+  color: var(--clr-red);
+  padding: 1rem;
+}
+
+.home {
+  padding: 3rem;
 }
